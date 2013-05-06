@@ -40,7 +40,7 @@
 
 <meta charset="utf-8" />
 <title>Home of <?php print $_SESSION['username'];?></title>
-<link rel="stylesheet" href="sprites.css" type="text/css" media="screen, projection" />  
+<link rel="stylesheet" href="\\sprites.css" type="text/css" media="screen, projection" />  
 
 
 
