@@ -1,7 +1,8 @@
 <!DOCTYPE html> 
 <html> 
 
-<!--Emilio-->
+
+<!--Kevin-->
 
  
 <head>
@@ -34,13 +35,7 @@
 	
 	</div> 
 
-
-
-
-
 <!--menu--> 
-
-
 <hr/>
 	
 <div id="navigation">
@@ -57,22 +52,27 @@
  
  
  <!--end menu--> 
-	<?php  
+ <?php  
 	if (empty($_SESSION['username'])) { 
+		echo "Please login or register to submit an application for a license";
+	}
+	else { ?>
 	<div id="group2">  
-		<p>
-		<a href="loginform.php" class="myButton">Login</a>  
-		<a href="newuser.php" class="myButton">New User</a>
-		</p> 
+		<p> 
+		<form action="license.php" method="post"> 
+		License Number (Can be blank):<input type="text" name="L#"><br><br>
+		License Class:<input type="text" name="LicenseClass"><br><br> 
+		License Issued (yyyy-mm-dd):<input type="text" name="LicenseIssued"><br><br> 
+		License Type:<input type="text" name="LicenseType"><br><br> 
+		LicenseRestrictions:<input type="text" name="LicenseRestrictions"><br><br> 
+	<br><br> 
+	<input type="submit" value="Submit"> 
+	</form>
+	</p> 
 		
-	</div>
-	}
-	 else {
-        echo "Welcome to your home page,  ". $_SESSION['username']."! You have loaded this page". $_SESSION['visits'] ."times since logging in."
-        echo <a href="loginform.php?logout">Log out</a>
-    
-	}
- 	?>
+	</div> }
+	
+ 
    
 <br /> 
 <br /> 
