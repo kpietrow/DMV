@@ -58,10 +58,13 @@
  
  
  <!--end menu--> 
- <?php  if(empty($_SESSION['username'])) : ?>
-		<p>"Please login or register to submit an application"</p>
+ <?php  if(empty($_SESSION['username']))  
+		{
+		echo "Please login or register to submit an application"; 
+		}
 	
-	<?php else : ?>
+	else 
+	{ ?>
 	<div id="group2">  
 		<p> 
 		<form action="_scripts/php/app.php" method="post"> 
