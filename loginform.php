@@ -78,8 +78,8 @@
 		<div>
 			<label for="login_type" style="visibility:hidden;">I am:</label>
 			<select id="login_type" name="logintype" style="visibility:hidden;">
-				<option value="Register" selected="selected">a new user</option>
-				<option value="Login">an existing user</option>
+				<option value="Register">a new user</option>
+				<option value="Login" selected="selected">an existing user</option>
 			</select>
 		</div>
 		<div class="shownew" style="visibility:hidden;">
