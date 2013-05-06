@@ -46,9 +46,9 @@ class app
 	      $sql = 'INSERT INTO ' . $this->tablename . ' (L#, LicenseClass, 
 	      			LicenseIssued, LicenseExpires, LicenseType, UserID, 
 	      			LicenseRestrictions, UserDOB) VALUES ("'
-	               . $LNum . '", "' . $LicenseClass . '", "' . $LicenseIssued . '", "' $LicenseExpires '", "'
-	               $LicenseType '", "' $result['UserID'] '", "' $LicenseRestrictions '", "'
-	               $result['UserDOB'])';
+	               . $LNum . '", "' . $LicenseClass . '", "' . $LicenseIssued . '", "' . $LicenseExpires . '", "'
+	               . $LicenseType . '", "' . $result['UserID'] . '", "' . $LicenseRestrictions . '", "'
+	                . $result['UserDOB'] . ')";
 
 	      // submit database query
 	      $result = $this->dbconn->exec( $sql );

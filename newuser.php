@@ -5,6 +5,7 @@
       // destroy session (suppress error message here if session doesn't exist)
       // note: we must call session_start first so we have the session ID
       session_start();
+            echo "I'M MELTINGGGGGGGGGGGGGGGGGGGGGGGGGGG!!!!!!!!!!!!!!!!!!";
       @session_destroy();
    }
 ?>
