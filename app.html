@@ -58,6 +58,11 @@
  
  
  <!--end menu--> 
+ <?php  
+	if (empty($_SESSION['username'])) { 
+		echo "Please login or register to submit an application";
+	}
+	else { ?>
 	<div id="group2">  
 		<p> 
 		<form> 
@@ -117,16 +122,10 @@
 	<br><br> 
 	<input type="submit" value="Submit"> 
 	</form>
+	</p> 
 		
-		
-		
-		
-		
-
-		
-		</p> 
-		
-	</div>
+	</div> }
+	
  
    
 <br /> 
