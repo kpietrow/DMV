@@ -52,7 +52,7 @@
             $_SESSION['Username'] = $uname;
 
             // redirect to home page
-            header('Location: index.html');
+            header('Location: userhome.php');
          }
          else
             // we use err code 3 to mean login failed (either uname or passwd)

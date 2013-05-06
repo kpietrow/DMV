@@ -115,7 +115,7 @@
 			<label for="pass2_input">Confirm:</label>
 			<input id="pass2_input" name="passwd2" type="password" placeholder="Repeat your password"/>
 		</div> 
-		<input id="submit_login" type="submit" value="Submit" />
+		<input id="submit_login" type="submit" value="Register" />
 	</form>
 		
 		

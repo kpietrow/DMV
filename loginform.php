@@ -78,8 +78,8 @@
 		<div>
 			<label for="login_type" style="visibility:hidden;">I am:</label>
 			<select id="login_type" name="logintype" style="visibility:hidden;">
-				<option value="Register" selected="selected">a new user</option>
-				<option value="Login">an existing user</option>
+				<option value="Register">a new user</option>
+				<option value="Login" selected="selected">an existing user</option>
 			</select>
 		</div>
 		<div class="shownew" style="visibility:hidden;">
@@ -97,7 +97,7 @@
 			<label for="pass2_input">Confirm:</label>
 			<input id="pass2_input" name="passwd2" type="password" placeholder="Repeat your password"/>
 		</div> 
-		<input id="submit_login" type="submit" value="Register" />
+		<input id="submit_login" type="submit" value="Login" />
 	</form>
 		
 		
