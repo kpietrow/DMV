@@ -1,6 +1,10 @@
 <?php
    // check whether the client submitted a POST request
    // and, if so, assume that the login form was submitted
+   
+   
+   // Why hello there Emilio
+   
    if ($_SERVER['REQUEST_METHOD'] == 'POST')
    {
       // import my function library (provides LoginManager class)
