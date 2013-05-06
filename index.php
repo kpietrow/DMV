@@ -27,20 +27,21 @@
 <body>
     <div>
         <p>Welcome to your home page, <?php print $_SESSION['username'];?>!</p>
-        <p><a href="../../loginform.php?logout">Log out</a></p>
+        <p><a href="loginform.php?logout">Log out</a></p>
     </div>
 
 <!DOCTYPE html> 
 <html> 
 
-<!--Emilio-->
+
+<!--Emilio and Kevin-->
 
  
 <head>
-
+  
 <meta charset="utf-8" />
-<title>Home of <?php print $_SESSION['username'];?></title>
-<link rel="stylesheet" href="../../sprites.css" type="text/css" media="screen, projection" />  
+<title>Home page</title>
+<link rel="stylesheet" href="sprites.css" type="text/css" media="screen, projection" />  
 
 
 
@@ -79,28 +80,17 @@
 	
 <div id="navigation">
   <ul>
-    <li id="home"><a href="../../index.php" class="navigation a">home</a></li>
-    <li id="app"><a href="../../app.php" class="navigation a">app</a></li>
-    <li id="about"><a href="../../about.php" class="navigation a">about</a></li> 
+    <li id="home"><a href="index.php" class="navigation a">home</a></li>
+    <li id="app"><a href="app.php" class="navigation a">app</a></li>
+    <li id="about"><a href="about.php" class="navigation a">about</a></li> 
   </ul> 
  
  </div>  
 
  </nav>   
- 
- 
- 
- <!--end menu--> 
-	<div id="group2">  
-		
-		
-        <p>Welcome to your home page, <?php print $_SESSION['username'];?>! You have loaded this page <?php print $_SESSION['visits'];?> times since logging in.</p>
-        <p><a href="../../loginform.php?logout">Log out</a></p>
-    
-		</p> 
-		
+ <div id="group2">
+   <p>This is the home page for the DMV Website by Group 5.</p>
 	</div>
- 
    
 <br /> 
 <br /> 
@@ -122,9 +112,8 @@
 
 </body> 
 
-</html>	
-	
-	
+</html>
+
 	<?php
     }
 ?>

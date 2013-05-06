@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 define('DB_NAME', 'dmvDB'); 
 define('DB_USER', 'root'); 
 define('DB_PASSWORD', ''); 
@@ -29,12 +29,8 @@ $value6 = $_POST['UserZip'];
 $value7 = $_POST['UserDOB']; 
 $value8 = $_POST['UserSex']; 
 $value9 = $_POST['UserEyes']; 
-$value10 = $_POST['UserHeight']; 
-echo 'poop';
-$value11 = $_SESSION['Username'];
-echo $_SESSION['Username'];
-echo $value11;
-echo 'BAAAAHAHAHAHAHAHAHAHAH';
+$value10 = $_POST['UserHeight'];
+$value11 = $_SESSION['username'];
 $value12 = $_POST['UserState'];
 
 
@@ -47,6 +43,12 @@ UserHeight, Username, UserState) VALUES ('$value0', '', '$value1', '$value2', '$
 if (!mysql_query($sql)) { 
 	die('Error: ' . mysql_error()); 
 }
-
+?>
+<div id="group2">  
+		<p>
+		<a href="../../index.php" class="myButton">Return to Home page</a>  
+		</p>
+</div>
+<?php
 mysql_close(); 
 ?>

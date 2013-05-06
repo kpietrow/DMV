@@ -1,3 +1,36 @@
+<?php
+    session_start();
+
+    if (empty($_SESSION['username']))
+    {
+        // if no username is present, redirect back to login form
+        header('Location: login.php');
+    }
+    else
+    {
+        if (empty($_SESSION['visits']))
+        {
+            $_SESSION['visits'] = 1;
+        }
+        else
+        {
+            $_SESSION['visits']++;
+        }
+?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Home of <?php print $_SESSION['username'];?></title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/calm.css" />
+</head>
+<body>
+    <div>
+        <p>Welcome to the License application page, <?php print $_SESSION['username'];?>!</p>
+        <p><a href="loginform.php?logout">Log out</a></p>
+    </div>
+
 <!DOCTYPE html> 
 <html> 
 
@@ -6,9 +39,10 @@
 
  
 <head>
-  
+ 
+<meta charset="utf-8" />
+<title>Home of <?php print $_SESSION['username'];?></title>
 <link rel="stylesheet" href="sprites.css" type="text/css" media="screen, projection" />  
-
 
 
 </style> 
@@ -40,9 +74,9 @@
 	
 <div id="navigation">
   <ul>
-    <li id="home"><a href="index.html" class="navigation a">home</a></li>
-    <li id="app"><a href="app.html" class="navigation a">app</a></li>
-    <li id="about"><a href="about.html" class="navigation a">about</a></li> 
+    <li id="home"><a href="index.php" class="navigation a">home</a></li>
+    <li id="app"><a href="app.php" class="navigation a">app</a></li>
+    <li id="about"><a href="about.php" class="navigation a">about</a></li> 
   </ul> 
  
  </div>  
@@ -59,7 +93,7 @@
 	else { ?>
 	<div id="group2">  
 		<p> 
-		<form action="license.php" method="post"> 
+		<form action="_scripts/php/licenseform.php" method="post"> 
 		License Number (Can be blank):<input type="text" name="LNum"><br><br>
 		License Class:<input type="text" name="LicenseClass"><br><br> 
 		License Issued (yyyy-mm-dd):<input type="text" name="LicenseIssued"><br><br> 
@@ -71,7 +105,7 @@
 	</form>
 	</p> 
 		
-	</div> }
+	</div> <?php } ?>
 	
  
    
@@ -96,3 +130,6 @@
 </body> 
 
 </html>
+	<?php
+    }
+?>

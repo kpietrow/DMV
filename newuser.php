@@ -5,7 +5,7 @@
       // destroy session (suppress error message here if session doesn't exist)
       // note: we must call session_start first so we have the session ID
       session_start();
-            echo "I'M MELTINGGGGGGGGGGGGGGGGGGGGGGGGGGG!!!!!!!!!!!!!!!!!!";
+      echo "Logging out now";
       @session_destroy();
    }
 ?>
@@ -60,9 +60,9 @@
 	
 <div id="navigation">
   <ul>
-    <li id="home"><a href="index.html" class="navigation a">home</a></li>
-    <li id="app"><a href="app.html" class="navigation a">app</a></li>
-    <li id="about"><a href="about.html" class="navigation a">about</a></li> 
+    <li id="home"><a href="index.php" class="navigation a">home</a></li>
+    <li id="app"><a href="app.php" class="navigation a">app</a></li>
+    <li id="about"><a href="about.php" class="navigation a">about</a></li> 
   </ul> 
  
  </div>  

@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+?>
+
 <!DOCTYPE html> 
 <html> 
 
@@ -46,9 +50,9 @@
 	
 <div id="navigation">
   <ul>
-    <li id="home"><a href="index.html" class="navigation a">home</a></li>
-    <li id="app"><a href="app.html" class="navigation a">app</a></li>
-    <li id="about"><a href="about.html" class="navigation a">about</a></li> 
+    <li id="home"><a href="index.php" class="navigation a">home</a></li>
+    <li id="app"><a href="app.php" class="navigation a">app</a></li>
+    <li id="about"><a href="about.php" class="navigation a">about</a></li> 
   </ul> 
  
  </div>  

@@ -49,7 +49,7 @@
          {
             // store user name as session data
             session_start();
-            $_SESSION['Username'] = $uname;
+            $_SESSION['username'] = $uname;
 
             // redirect to home page
             header('Location: userhome.php');

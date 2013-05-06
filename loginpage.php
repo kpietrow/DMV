@@ -1,14 +1,18 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html> 
 <html> 
 
-<!--Emilio-->
+
+<!--Emilio and Kevin-->
 
  
 <head>
-  
+<meta charset="utf-8" />
+<title>Login and Registration page</title>
 <link rel="stylesheet" href="sprites.css" type="text/css" media="screen, projection" />  
-
-
 
 </style> 
 
@@ -45,9 +49,9 @@
 	
 <div id="navigation">
   <ul>
-    <li id="home"><a href="index.html" class="navigation a">home</a></li>
-    <li id="app"><a href="app.html" class="navigation a">app</a></li>
-    <li id="about"><a href="about.html" class="navigation a">about</a></li> 
+    <li id="home"><a href="index.php" class="navigation a">home</a></li>
+    <li id="app"><a href="app.php" class="navigation a">app</a></li>
+    <li id="about"><a href="about.php" class="navigation a">about</a></li> 
   </ul> 
  
  </div>  
@@ -57,7 +61,6 @@
  
  
  <!--end menu--> 
-	<?php if(empty($_SESSION['username'])) : ?>
 	<div id="group2">  
 		<p>
 		<a href="loginform.php" class="myButton">Login</a>  
@@ -65,11 +68,7 @@
 		</p> 
 		
 	</div>
-	
-	<?php else : ?>
-        echo "Welcome to your home page,  ". $_SESSION['username']."! You have loaded this page". $_SESSION['visits'] ."times since logging in."
-        echo <a href="loginform.php?logout">Log out</a>
-    <?php endif; ?>
+
    
 <br /> 
 <br /> 
