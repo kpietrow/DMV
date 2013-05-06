@@ -1,5 +1,4 @@
 <?php
-
 	/**
 	 * Example class for managing user login actions.
 	 * This implementation uses the PDO approach to database connectivity.
@@ -11,11 +10,10 @@
 	{
 		private $dbconn;
 		private $tablename;
-
+		
 		function __construct( $tablename, $dbname, $dblogin, $dbpass,
 										$url = 'localhost' )
 		{
-
          $this->dbconn = new PDO("mysql:host=$url;dbname=$dbname", "$dblogin", "$dbpass");
          $this->tablename = $tablename;
 		}
@@ -26,7 +24,7 @@
 	   function isUnameAvailable( $desired_uname )
 	   {
 	      // build query string
-	      $sql = 'SELECT uname FROM ' . $this->tablename . ' WHERE uname = "' . $desired_uname . '"';
+	      $sql = 'SELECT Username FROM ' . $this->tablename . ' WHERE Username = "' . $desired_uname . '"';
 
 	      // submit database query
 	      $result = $this->dbconn->query( $sql );
@@ -38,6 +36,7 @@
 	    * Insert new user info into the table.
 	    */
 	   function addAccount($uname, $passwd, $email)
+
 	   {
 	      /* simple MD5 encryption [for production, use something like crypt() instead]
 	       * NOTE: instead of PHP, we can encrypt via our SQL query directly
@@ -46,7 +45,7 @@
 	      $passwd = md5($passwd);
 
 	      // build INSERT query string
-	      $sql = 'INSERT INTO ' . $this->tablename . ' (uname, passwd, email) VALUES ("'
+	      $sql = 'INSERT INTO ' . $this->tablename . ' (Username, Password, Email) VALUES ("'
 	               . $uname . '", "' . $passwd . '", "' . $email . '")';
 
 	      // submit database query
@@ -62,10 +61,11 @@
 	   function isLoginValid($uname, $passwd)
 	   {
 	      // get password value for row that matches the desired user name
-	      $sql = 'SELECT uname,passwd FROM ' . $this->tablename . ' WHERE uname="' . $uname . '"';
+	      $sql = 'SELECT Username,Password FROM ' . $this->tablename . ' WHERE Username="' . $uname . '"';
 
 	      // submit database query
 	      $result = $this->dbconn->query( $sql );
+
 
 	      // get first result record (there should be only one)
 	      $entry = $result->fetch();
@@ -81,10 +81,9 @@
 	      $passwd = md5($passwd);
 
 	      // compare encrypted passwords
+
 	      return ( $entry[1] == $passwd );
 	   }
-
-
 	   /**
    	 * Simple check whether both password form inputs match.
    	 * A more complete implementation might also check for
@@ -94,8 +93,5 @@
 	   {
    	   return $pass1 == $pass2;
 	   }
-
-
 	}
-
 ?>

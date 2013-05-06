@@ -8,38 +8,20 @@
       @session_destroy();
    }
 ?>
-
 <!DOCTYPE html> 
 <html> 
-
-
 <!--Emilio-->
-
- 
-<head>
-  
+<head>  
 <link rel="stylesheet" href="sprites.css" type="text/css" media="screen, projection" />  
-
-
-
 </style> 
-
 <title>DMV</title> 
-
 <link rel="shortcut icon" href="favicon.ico" type="x-icon">  
-
 <script type="text/javascript" src="_scripts/js/login.js"></script> 
-
 </head> 
-
 <body>
-
-
 <div id="container">
-   
 <nav>  
-
-<div id ="container2"> 
+<div id="container2"> 
 
 <div id="header_default"> 
 	<div class="header"> 

@@ -2,9 +2,6 @@
    // check whether the client submitted a POST request
    // and, if so, assume that the login form was submitted
    
-   
-   // Why hello there Emilio
-   
    if ($_SERVER['REQUEST_METHOD'] == 'POST')
    {
       // import my function library (provides LoginManager class)
@@ -28,7 +25,7 @@
 
                // send a confirmation email (note: our VMs don't actually send this, no SMTP setup)
                $subject = "Your New Account";
-               $body = 'Thank you for registering at lsjfcg7.linuxclass.marist.edu! Your new login name is ' . $uname;
+               $body = 'Thank you for registering! Your new login name is ' . $uname;
                mail($email, $subject, $body);
 
                // store user name as session data
@@ -52,10 +49,10 @@
          {
             // store user name as session data
             session_start();
-            $_SESSION['username'] = $uname;
+            $_SESSION['Username'] = $uname;
 
             // redirect to home page
-            header('Location: userhome.php');
+            header('Location: index.html');
          }
          else
             // we use err code 3 to mean login failed (either uname or passwd)
