@@ -40,7 +40,7 @@
 
 <meta charset="utf-8" />
 <title>Home of <?php print $_SESSION['username'];?></title>
-<link rel="stylesheet" href="\\sprites.css" type="text/css" media="screen, projection" />  
+<link rel="stylesheet" href="../../sprites.css" type="text/css" media="screen, projection" />  
 
 
 
@@ -79,9 +79,9 @@
 	
 <div id="navigation">
   <ul>
-    <li id="home"><a href="/dmv/index.html" class="navigation a">home</a></li>
-    <li id="app"><a href="/dmv/app.html" class="navigation a">app</a></li>
-    <li id="about"><a href="/dmv/about.html" class="navigation a">about</a></li> 
+    <li id="home"><a href="../../index.html" class="navigation a">home</a></li>
+    <li id="app"><a href="../../app.html" class="navigation a">app</a></li>
+    <li id="about"><a href="../../about.html" class="navigation a">about</a></li> 
   </ul> 
  
  </div>  
