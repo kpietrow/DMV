@@ -18,7 +18,7 @@
 </head>
 <body>
     <h1>Login Portal</h1>
-<?php
+<?php 
    if (isset($_POST['login_type']) && $_POST['login_type'] == 'an existing user') 
    { 
 	<div>
@@ -29,8 +29,7 @@
 		<input id="pass_input" name="passwd" type="password" required="required" placeholder="Enter your password"/>
 	</div> 
 	
-	<input id="submit_login" type="submit" value="Submit" /> 
-	
+	<input id="submit_login" type="submit" value="Submit" /> 	
 	} 
 	else 
 	{ 
