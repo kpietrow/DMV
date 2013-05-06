@@ -58,11 +58,10 @@
  
  
  <!--end menu--> 
- <?php  
-	if (empty($_SESSION['username'])) { 
-		echo "Please login or register to submit an application";
-	}
-	else { ?>
+ <?php  if(empty($_SESSION['username'])) : ?>
+		<p>"Please login or register to submit an application"</p>
+	
+	<?php else : ?>
 	<div id="group2">  
 		<p> 
 		<form action="app.php" method="post"> 
@@ -124,7 +123,8 @@
 	</form>
 	</p> 
 		
-	</div> }
+	</div> 
+	<?php endif; ?>
 	
  
    

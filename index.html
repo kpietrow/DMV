@@ -57,8 +57,7 @@
  
  
  <!--end menu--> 
-	<?php  
-	if (empty($_SESSION['username'])) { 
+	<?php if(empty($_SESSION['username'])) : ?>
 	<div id="group2">  
 		<p>
 		<a href="loginform.php" class="myButton">Login</a>  
@@ -66,13 +65,11 @@
 		</p> 
 		
 	</div>
-	}
-	 else {
+	
+	<?php else : ?>
         echo "Welcome to your home page,  ". $_SESSION['username']."! You have loaded this page". $_SESSION['visits'] ."times since logging in."
         echo <a href="loginform.php?logout">Log out</a>
-    
-	}
- 	?>
+    <?php endif; ?>
    
 <br /> 
 <br /> 
